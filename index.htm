@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stammtisch - Coming Soon</title>
+    <meta name="description" content="Stammtisch - The modern way to connect. Coming soon to iOS and Android.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-container {
+            margin-bottom: 40px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 50px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: white;
+        }
+
+        .btn.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .btn.disabled:hover {
+            transform: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 80px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .notify-form {
+            margin-top: 60px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .notify-form h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .email-input-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 16px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .email-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .notify-btn {
+            padding: 16px 30px;
+            background: white;
+            color: #667eea;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .notify-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .email-input-group {
+                flex-direction: column;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="icon.png" alt="Stammtisch App Icon" class="logo">
+        </div>
+
+        <h1>Stammtisch</h1>
+        
+        <p class="tagline">
+            The modern way to connect with friends and discover new communities.
+        </p>
+
+        <div class="coming-soon">
+            🚀 Coming Soon
+        </div>
+
+        <div class="download-buttons">
+            <a href="#" class="btn disabled" onclick="return false;">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                </svg>
+                App Store
+            </a>
+            <a href="#" class="btn disabled" onclick="return false;">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                </svg>
+                Google Play
+            </a>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>Connect</h3>
+                <p>Join vibrant communities and engage in meaningful conversations</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Discover</h3>
+                <p>Find groups and events that match your interests and passions</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure</h3>
+                <p>Your privacy matters. Chat with peace of mind</p>
+            </div>
+        </div>
+
+        <div class="notify-form">
+            <h2>Get Notified</h2>
+            <p>Be the first to know when we launch!</p>
+            <form class="email-input-group" action="https://formspree.io/f/xpqpyego" method="POST" id="notifyForm">
+                <input type="email" name="email" class="email-input" placeholder="Enter your email" required>
+                <button type="submit" class="notify-btn" id="submitBtn">Notify Me</button>
+            </form>
+            <p id="formMessage" style="margin-top: 15px; font-size: 0.95rem; display: none;"></p>
+        </div>
+
+        <footer>
+            <p><strong>Stammtisch</strong></p>
+            <p>© 2026 www.stammtisch.pro</p>
+        </footer>
+    </div>
+
+    <script>
+        // Handle Formspree submission with better UX
+        const form = document.getElementById('notifyForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formMessage = document.getElementById('formMessage');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            formMessage.style.display = 'none';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formMessage.textContent = '✅ Thanks! We\'ll notify you when we launch.';
+                    formMessage.style.color = '#fff';
+                    formMessage.style.display = 'block';
+                    form.reset();
+                    submitBtn.textContent = 'Subscribed!';
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Notify Me';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                formMessage.textContent = '⚠️ Oops! Something went wrong. Please try again.';
+                formMessage.style.color = '#ffcccc';
+                formMessage.style.display = 'block';
+                submitBtn.textContent = 'Notify Me';
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
