@@ -12,7 +12,12 @@
         // Redirect Firebase auth links to Firebase app
         const params = new URLSearchParams(window.location.search);
         if (params.has('mode') && params.has('oobCode') && params.has('apiKey')) {
-            window.location.href = 'https://stammtischdrjmudev.firebaseapp.com/' + window.location.search;
+            window.location.href = 'https://stammtischdrjmudev.web.app/' + window.location.search;
+        }
+        
+        // Redirect auth-action.html requests
+        if (window.location.pathname === '/auth-action.html') {
+            window.location.href = 'https://stammtischdrjmudev.web.app/auth-action.html' + window.location.search;
         }
     </script>
     <style>
