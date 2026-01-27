@@ -8,6 +8,13 @@
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="shortcut icon" type="image/png" href="icon.png">
     <meta name="description" content="Stammtisch - The modern way to connect. Coming soon to iOS and Android.">
+    <script>
+        // Redirect Firebase auth links to Firebase app
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('mode') && params.has('oobCode') && params.has('apiKey')) {
+            window.location.href = 'https://stammtischdrjmudev.firebaseapp.com/' + window.location.search;
+        }
+    </script>
     <style>
         * {
             margin: 0;
