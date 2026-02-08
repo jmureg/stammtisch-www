@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host a Stammtisch - Partner Locations</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <meta name="description" content="Partner with Stammtisch to bring regular groups to your restaurant or bar. Increase weekday traffic and build loyal customers.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0 60px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0 80px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .section {
+            margin: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .benefit {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .benefit:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .benefit h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .benefit p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .how-it-works {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 50px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 60px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: white;
+            color: #667eea;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .step h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .form-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-intro h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .form-intro p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        form {
+            display: grid;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        label .required {
+            color: #ffcccc;
+        }
+
+        input, textarea, select {
+            padding: 14px 18px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            font-family: inherit;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .submit-btn {
+            padding: 18px 40px;
+            background: white;
+            color: #667eea;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        #formMessage {
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: 600;
+            display: none;
+        }
+
+        #formMessage.success {
+            background: rgba(76, 175, 80, 0.3);
+            border: 1px solid rgba(76, 175, 80, 0.5);
+        }
+
+        #formMessage.error {
+            background: rgba(244, 67, 54, 0.3);
+            border: 1px solid rgba(244, 67, 54, 0.5);
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        footer a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .stats {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .how-it-works, .form-section {
+                padding: 30px 20px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.htm" class="logo">Stammtisch</a>
+            <nav>
+                <a href="index.htm">Home</a>
+                <a href="locations.html">For Venues</a>
+                <a href="privacy.html">Privacy</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="badge">🍺 Partner Program</div>
+            <h1>Turn Empty Tables Into Regular Customers</h1>
+            <p class="subtitle">
+                Join restaurants and bars hosting Stammtisch groups. Get predictable reservations, 
+                fill slow nights, and build a loyal community—all while getting free promotion in our app.
+            </p>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">2-4x</span>
+                    <span class="stat-label">Weekly visits per group</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4-15</span>
+                    <span class="stat-label">People per gathering</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Free to join</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Why Partner With Stammtisch?</h2>
+            
+            <div class="benefits">
+                <div class="benefit">
+                    <span class="benefit-icon">📅</span>
+                    <h3>Predictable Revenue</h3>
+                    <p>Stammtisch groups meet bi-weekly monthly or quartly. Lock in recurring reservations that you can count on.</p>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon">👥</span>
+                    <h3>New Customers</h3>
+                    <p>Each group brings 4-15 people who've never visited before. First-time guests become regulars when they love your place.</p>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon">📱</span>
+                    <h3>Free App Promotion</h3>
+                    <p>Your venue is featured in the Stammtisch app with photos, menu highlights, reviews, and directions—reaching thousands of local users.</p>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon">🌙</span>
+                    <h3>Fill Slow Nights</h3>
+                    <p>Most groups prefer Monday-Thursday evenings. Turn your slowest nights into profitable ones without discounting.</p>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon">🤝</span>
+                    <h3>Build Community</h3>
+                    <p>Become the go-to spot for local communities. Groups return month after month, bringing friends and spreading word-of-mouth.</p>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon">💰</span>
+                    <h3>No Commission Fees</h3>
+                    <p>Unlike delivery apps, we don't take a cut. You keep 100% of sales. Just provide great hospitality.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="how-it-works">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Submit Your Venue</h4>
+                        <p>Fill out the form below with your details and availability</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Get Listed</h4>
+                        <p>We add your location to the app with photos and details</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Welcome Groups</h4>
+                        <p>Groups book directly through the app and visit regularly</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Grow Together</h4>
+                        <p>Build relationships and watch your regulars multiply</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="form-section">
+                <div class="form-intro">
+                    <h2>Become a Partner Venue</h2>
+                    <p>Submit your restaurant or bar to start hosting Stammtisch groups</p>
+                </div>
+
+                <form id="partnerForm" action="https://formspree.io/f/xpqpyego" method="POST">
+                    <input type="hidden" name="_subject" value="New Stammtisch Partner Venue Submission">
+                    
+                    <div class="form-group">
+                        <label>Restaurant/Bar Name <span class="required">*</span></label>
+                        <input type="text" name="venue_name" placeholder="The Golden Pint" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Contact Person <span class="required">*</span></label>
+                            <input type="text" name="contact_name" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email <span class="required">*</span></label>
+                            <input type="email" name="email" placeholder="john@goldenpint.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone Number <span class="required">*</span></label>
+                            <input type="tel" name="phone" placeholder="(555) 123-4567" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Website</label>
+                            <input type="text" name="website" placeholder="goldenpint.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Full Address <span class="required">*</span></label>
+                        <input type="text" name="address" placeholder="123 Main St, San Francisco, CA 94102" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Special Offer for First Groups</label>
+                        <textarea name="special_offer" placeholder="Example: 10% off first visit, free appetizer for groups of 10+, complimentary round of drinks, etc."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Number of Groups for Special Offer</label>
+                        <input type="number" name="offer_limit" placeholder="e.g., 5" min="1" max="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Days & Times <span class="required">*</span></label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="mon_eve" name="availability" value="Monday Evening">
+                                <label for="mon_eve">Monday Evening</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="tue_eve" name="availability" value="Tuesday Evening">
+                                <label for="tue_eve">Tuesday Evening</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="wed_eve" name="availability" value="Wednesday Evening">
+                                <label for="wed_eve">Wednesday Evening</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="thu_eve" name="availability" value="Thursday Evening">
+                                <label for="thu_eve">Thursday Evening</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="fri_eve" name="availability" value="Friday Evening">
+                                <label for="fri_eve">Friday Evening</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sat_aft" name="availability" value="Saturday Afternoon">
+                                <label for="sat_aft">Saturday Afternoon</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sat_eve" name="availability" value="Saturday Evening">
+                                <label for="sat_eve">Saturday Evening</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sun_aft" name="availability" value="Sunday Afternoon">
+                                <label for="sun_aft">Sunday Afternoon</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Additional Information</label>
+                        <textarea name="additional_info" placeholder="Tell us about your venue, capacity for groups, any special features or amenities..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">Submit Partnership Request</button>
+                    
+                    <div id="formMessage"></div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p><strong>Stammtisch</strong></p>
+            <p>© 2026 www.stammtisch.pro</p>
+            <p style="margin-top: 15px;">
+                <a href="index.htm">Home</a> · 
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const form = document.getElementById('partnerForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formMessage = document.getElementById('formMessage');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            formMessage.style.display = 'none';
+            formMessage.className = '';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formMessage.textContent = '✅ Thank you! We\'ll review your submission and contact you within 2-3 business days.';
+                    formMessage.className = 'success';
+                    formMessage.style.display = 'block';
+                    form.reset();
+                    submitBtn.textContent = 'Submitted Successfully!';
+                    
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Submit Partnership Request';
+                        submitBtn.disabled = false;
+                    }, 5000);
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                formMessage.textContent = '⚠️ Something went wrong. Please try again or email us directly.';
+                formMessage.className = 'error';
+                formMessage.style.display = 'block';
+                submitBtn.textContent = 'Submit Partnership Request';
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
