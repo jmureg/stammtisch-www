@@ -351,11 +351,13 @@
         </div>
 
         <div class="notify-form">
-            <h2>Get Notified</h2>
-            <p>Be the first to know when we launch!</p>
-            <form class="email-input-group" action="https://formspree.io/f/xpqpyego" method="POST" id="notifyForm">
-                <input type="email" name="email" class="email-input" placeholder="Enter your email" required>
-                <button type="submit" class="notify-btn" id="submitBtn">Notify Me</button>
+            <h2>Get in Touch</h2>
+            <p>Get notified when we launch or send us a message!</p>
+            <form class="email-input-group" action="https://formspree.io/f/xpqpyego" method="POST" id="notifyForm" style="flex-direction: column; gap: 15px;">
+                <input type="text" name="name" class="email-input" placeholder="Your name (optional)">
+                <input type="email" name="email" class="email-input" placeholder="Your email" required>
+                <textarea name="message" class="email-input" placeholder="Message (optional)" style="min-height: 100px; resize: vertical; font-family: inherit;"></textarea>
+                <button type="submit" class="notify-btn" id="submitBtn" style="width: 100%;">Send</button>
             </form>
             <p id="formMessage" style="margin-top: 15px; font-size: 0.95rem; display: none;"></p>
         </div>
@@ -399,15 +401,15 @@
                 });
                 
                 if (response.ok) {
-                    formMessage.textContent = '✅ Thanks! We\'ll notify you when we launch.';
+                    formMessage.textContent = '✅ Thanks! We\'ll be in touch soon.';
                     formMessage.style.color = '#fff';
                     formMessage.style.display = 'block';
                     form.reset();
-                    submitBtn.textContent = 'Subscribed!';
+                    submitBtn.textContent = 'Sent!';
                     
                     // Reset button after 3 seconds
                     setTimeout(() => {
-                        submitBtn.textContent = 'Notify Me';
+                        submitBtn.textContent = 'Send';
                         submitBtn.disabled = false;
                     }, 3000);
                 } else {
@@ -417,7 +419,7 @@
                 formMessage.textContent = '⚠️ Oops! Something went wrong. Please try again.';
                 formMessage.style.color = '#ffcccc';
                 formMessage.style.display = 'block';
-                submitBtn.textContent = 'Notify Me';
+                submitBtn.textContent = 'Send';
                 submitBtn.disabled = false;
             }
         });
