@@ -63,13 +63,18 @@
         
         if (path.startsWith('/join/')) {
             const token = path.split('/join/')[1];
-            const currentUrl = window.location.href;
             
-            // When user clicks "Open in App", trigger the Universal Link
+            // When user clicks "Open in App", try to open with custom scheme
             document.getElementById('openApp').addEventListener('click', function(e) {
                 e.preventDefault();
-                // Redirect to same URL - iOS will intercept and offer to open app
-                window.location.href = currentUrl;
+                
+                // Try custom URL scheme first
+                window.location.href = `stammtisch://join/${token}`;
+                
+                // Fallback: show instructions after 1 second if app didn't open
+                setTimeout(() => {
+                    alert('If the app didn\'t open, please tap and hold this link, then select "Open in Stammtisch"');
+                }, 1000);
             });
         } else {
             window.location.href = '/';
