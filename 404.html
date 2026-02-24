@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Stammtisch</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container { max-width: 500px; }
+        h1 { font-size: 2em; margin-bottom: 0.5em; }
+        p { font-size: 1.1em; margin-bottom: 2em; }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="loading">
+            <h1>Opening Stammtisch App...</h1>
+            <p>Redirecting you now.</p>
+        </div>
+        <div id="fallback" style="display: none;">
+            <h1>Download Stammtisch</h1>
+            <p>To join this group, please download the Stammtisch app.</p>
+            <a href="https://apps.apple.com/app/stammtisch" class="button">App Store</a>
+            <a href="/" class="button">Learn More</a>
+        </div>
+    </div>
+    <script>
+        const path = window.location.pathname;
+        
+        // Check if this is a /join/* URL
+        if (path.startsWith('/join/')) {
+            const token = path.split('/join/')[1];
+            const appUrl = `stammtisch://join/${token}`;
+            
+            // Try app deep link
+            window.location.href = appUrl;
+            
+            // Show fallback after 2 seconds
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('fallback').style.display = 'block';
+            }, 2000);
+        } else {
+            // Not a join link, redirect to home
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
