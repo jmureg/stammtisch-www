@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "AH26GKFR55.com.juliusmueller.stammtisch",
+        "paths": [
+          "/stammtisch/*",
+          "/invite/*",
+          "/join/*"
+        ]
+      }
+    ]
+  }
+}
