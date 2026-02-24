@@ -36,34 +36,18 @@
 </head>
 <body>
     <div class="container">
-        <div id="loading">
-            <h1>Opening Stammtisch App...</h1>
-            <p>Redirecting you now.</p>
-        </div>
-        <div id="fallback" style="display: none;">
-            <h1>Download Stammtisch</h1>
-            <p>To join this group, please download the Stammtisch app.</p>
-            <a href="https://apps.apple.com/app/stammtisch" class="button">App Store</a>
-            <a href="/" class="button">Learn More</a>
-        </div>
+        <h1>Join Stammtisch</h1>
+        <p>Open this link in Safari on your iPhone to join the group in the Stammtisch app.</p>
+        <p style="font-size: 0.9em; opacity: 0.9;">If you have the app installed, it should open automatically.</p>
+        <a href="https://apps.apple.com/app/stammtisch" class="button">Download App</a>
+        <a href="/" class="button">Learn More</a>
     </div>
     <script>
         const path = window.location.pathname;
         
-        // Check if this is a /join/* URL
-        if (path.startsWith('/join/')) {
-            const token = path.split('/join/')[1];
-            const appUrl = `stammtisch://join/${token}`;
-            
-            // Try app deep link
-            window.location.href = appUrl;
-            
-            // Show fallback after 2 seconds
-            setTimeout(() => {
-                document.getElementById('loading').style.display = 'none';
-                document.getElementById('fallback').style.display = 'block';
-            }, 2000);
-        } else {
+        // Universal Links work automatically on iOS
+        // No JavaScript redirect needed - iOS handles it
+        if (!path.startsWith('/join/')) {
             // Not a join link, redirect to home
             window.location.href = '/';
         }
