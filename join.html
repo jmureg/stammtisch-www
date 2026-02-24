@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Stammtisch</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+        }
+        h1 { font-size: 2em; margin-bottom: 0.5em; }
+        p { font-size: 1.1em; margin-bottom: 2em; }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    </style>
+    <script>
+        // Extract token from URL path
+        const pathParts = window.location.pathname.split('/');
+        const token = pathParts[pathParts.length - 1];
+        
+        // Try to open in app via deep link
+        const appScheme = `stammtisch://join/${token}`;
+        window.location.href = appScheme;
+        
+        // Fallback message after 2 seconds
+        setTimeout(() => {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('fallback').style.display = 'block';
+        }, 2000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="loading">
+            <h1>Opening Stammtisch App...</h1>
+            <p>Please wait while we redirect you to the app.</p>
+        </div>
+        <div id="fallback" style="display: none;">
+            <h1>Download Stammtisch</h1>
+            <p>To join this group, please download the Stammtisch app first.</p>
+            <a href="https://apps.apple.com/app/stammtisch" class="button">Download on App Store</a>
+        </div>
+    </div>
+</body>
+</html>
