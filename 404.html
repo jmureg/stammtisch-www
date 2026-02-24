@@ -19,36 +19,59 @@
             padding: 20px;
         }
         .container { max-width: 500px; }
-        h1 { font-size: 2em; margin-bottom: 0.5em; }
-        p { font-size: 1.1em; margin-bottom: 2em; }
-        .button {
+        h1 { font-size: 2.5em; margin-bottom: 0.3em; }
+        p { font-size: 1.1em; margin-bottom: 1.5em; opacity: 0.95; }
+        .primary-button {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 20px 40px;
             background: white;
             color: #667eea;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.3em;
+            margin: 20px 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        .primary-button:active {
+            transform: scale(0.95);
+        }
+        .secondary-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1em;
             margin: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Join Stammtisch</h1>
-        <p>Open this link in Safari on your iPhone to join the group in the Stammtisch app.</p>
-        <p style="font-size: 0.9em; opacity: 0.9;">If you have the app installed, it should open automatically.</p>
-        <a href="https://apps.apple.com/app/stammtisch" class="button">Download App</a>
-        <a href="/" class="button">Learn More</a>
+        <h1>🍻 Join Stammtisch</h1>
+        <p>You've been invited to join a group!</p>
+        <a href="#" id="openApp" class="primary-button">Open in App</a>
+        <p style="font-size: 0.9em; opacity: 0.8; margin-top: 30px;">Don't have the app yet?</p>
+        <a href="https://apps.apple.com/app/stammtisch" class="secondary-button">Download from App Store</a>
     </div>
     <script>
         const path = window.location.pathname;
         
-        // Universal Links work automatically on iOS
-        // No JavaScript redirect needed - iOS handles it
-        if (!path.startsWith('/join/')) {
-            // Not a join link, redirect to home
+        if (path.startsWith('/join/')) {
+            const token = path.split('/join/')[1];
+            const currentUrl = window.location.href;
+            
+            // When user clicks "Open in App", trigger the Universal Link
+            document.getElementById('openApp').addEventListener('click', function(e) {
+                e.preventDefault();
+                // Redirect to same URL - iOS will intercept and offer to open app
+                window.location.href = currentUrl;
+            });
+        } else {
             window.location.href = '/';
         }
     </script>
