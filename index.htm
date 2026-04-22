@@ -205,6 +205,30 @@
             line-height: 1.6;
         }
 
+        /* === Pricing Cards === */
+        .pricing-section { margin-top: 80px; }
+        .pricing-section h2 { font-size: 2rem; margin-bottom: 10px; font-weight: 700; }
+        .pricing-section > p { opacity: 0.9; margin-bottom: 30px; }
+        .pricing-cards { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+        .pricing-card { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; width: 300px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s ease; text-align: left; }
+        .pricing-card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.15); }
+        .pricing-card.pro { border: 2px solid rgba(255,255,255,0.5); }
+        .pricing-card h3 { font-size: 1.4rem; margin-bottom: 5px; }
+        .pricing-card .price { font-size: 2.5rem; font-weight: 700; margin-bottom: 5px; }
+        .pricing-card .price small { font-size: 1rem; font-weight: 300; opacity: 0.7; }
+        .pricing-card .annual { font-size: 0.85rem; opacity: 0.7; margin-bottom: 15px; }
+        .pricing-card ul { list-style: none; margin-bottom: 20px; }
+        .pricing-card ul li { padding: 6px 0; font-size: 0.95rem; opacity: 0.9; }
+        .pricing-card ul li::before { content: "✓ "; opacity: 0.7; }
+        .pricing-card .card-cta { display: block; text-align: center; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 600; color: #667eea; background: rgba(255,255,255,0.9); transition: all 0.3s ease; }
+        .pricing-card .card-cta:hover { background: white; transform: scale(1.03); }
+        .pricing-card .trial-note { text-align: center; font-size: 0.8rem; opacity: 0.6; margin-top: 8px; }
+
+        @media (max-width: 768px) {
+            .pricing-cards { flex-direction: column; align-items: center; }
+            .pricing-card { width: 100%; max-width: 340px; }
+        }
+
         .notify-form {
             margin-top: 60px;
             max-width: 500px;
@@ -354,6 +378,43 @@
                 <div class="feature-icon">🔒</div>
                 <h3>Secure</h3>
                 <p>We prioritize your privacy with industry-standard security measures</p>
+            </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="pricing-section">
+            <h2>Simple Pricing</h2>
+            <p>Start free. Upgrade when you're ready.</p>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Standard</h3>
+                    <div class="price">Free</div>
+                    <div class="annual">&nbsp;</div>
+                    <ul>
+                        <li>1 stammtisch</li>
+                        <li>Up to 5 members</li>
+                        <li>Date/location voting</li>
+                        <li>Notifications &amp; email</li>
+                        <li>Calendar integration</li>
+                    </ul>
+                    <a href="https://stammtisch.pro" class="card-cta">Get Started</a>
+                </div>
+                <div class="pricing-card pro">
+                    <h3>Pro</h3>
+                    <div class="price">$1.99<small>/mo</small></div>
+                    <div class="annual">or $20/year (save 17%)</div>
+                    <ul>
+                        <li>Up to 10 stammtische</li>
+                        <li>Up to 50 members</li>
+                        <li>Ad-free experience</li>
+                        <li>Analytics dashboard</li>
+                        <li>Custom branding/themes</li>
+                        <li>Data export</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="https://stammtisch.pro" class="card-cta">Start Free Trial</a>
+                    <p class="trial-note">3-month free trial included</p>
+                </div>
             </div>
         </div>
 
