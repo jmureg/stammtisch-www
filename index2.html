@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stammtisch.pro — Your group actually meets again</title>
+
+    <meta name="description" content="Your group chat is full of plans that never happen. Stammtisch fixes it — vote on dates, lock plans, and actually meet.">
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-main {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .hero-highlight {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 30px;
+            background: white;
+            color: #667eea;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .proof {
+            margin-top: 60px;
+            opacity: 0.9;
+        }
+
+        .steps {
+            margin-top: 80px;
+            display: grid;
+            gap: 20px;
+        }
+
+        .step {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .features {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 20px;
+        }
+
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .pricing {
+            margin-top: 80px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            width: 280px;
+        }
+
+        footer {
+            margin-top: 80px;
+            opacity: 0.7;
+        }
+
+        @media(max-width:768px){
+            h1 { font-size: 2.5rem; }
+            .hero-main { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Stammtisch</h1>
+
+    <!-- HERO -->
+    <p class="hero-main">
+        Your group chat is full of plans that never happen.
+    </p>
+
+    <p class="hero-sub">
+        “Does Friday work?”<br>
+        “I can’t.”<br>
+        “What about next week?”<br><br>
+        …and suddenly it’s been 3 months since you last met.
+    </p>
+
+    <p class="hero-highlight">
+        Stammtisch fixes this — your group votes, the best option wins, and the plan is locked in.
+    </p>
+
+    <a href="https://apps.apple.com/us/app/stammtisch/id6759274599" class="btn">Download iOS</a>
+    <a href="https://play.google.com/store/apps/details?id=com.juliusmueller.stammtisch" class="btn">Android</a>
+
+    <p style="margin-top:20px; opacity:0.8;">
+        Stop planning. Start meeting.
+    </p>
+
+    <!-- SOCIAL PROOF -->
+    <div class="proof">
+        Groups that use Stammtisch don’t just plan more — they actually meet.
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="steps">
+        <div class="step">1. Create your group</div>
+        <div class="step">2. Suggest dates & places</div>
+        <div class="step">3. Everyone votes</div>
+        <div class="step">4. Plan locked automatically</div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features">
+        <div class="feature">
+            <h3>Your group actually meets again</h3>
+            <p>No endless back-and-forth. Just results.</p>
+        </div>
+
+        <div class="feature">
+            <h3>No one has to organize</h3>
+            <p>No more chasing people.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Plans don’t fall apart</h3>
+            <p>Best option wins. Fewer cancellations.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Turn “we should” into real plans</h3>
+            <p>From idea to confirmed event in seconds.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Make it a habit</h3>
+            <p>Recurring meetups keep your group alive.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Meet new people</h3>
+            <p>Join nearby groups easily.</p>
+        </div>
+    </div>
+
+    <!-- PRICING -->
+    <div class="pricing">
+        <h2>Start free</h2>
+        <p>If your group actually meets, you’ll want more.</p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Free</h3>
+                <p>1 group · 5 people</p>
+            </div>
+
+            <div class="card">
+                <h3>Pro</h3>
+                <p>$1.99/month</p>
+                <p>More groups · More people</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div style="margin-top:80px;">
+        <p style="font-size:1.3rem;">
+            Don’t let your group fade out.
+        </p>
+        <a href="https://stammtisch.pro" class="btn">Try it free</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 stammtisch.pro</p>
+    </footer>
+
+</div>
+</body>
+</html>
