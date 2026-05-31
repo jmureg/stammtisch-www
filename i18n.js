@@ -18,7 +18,10 @@
             },
             metaDescription: {
                 home: 'Stammtisch.pro - Stop the endless group chats. Find the best day, time, and place for your next meetup automatically. Available on iOS and Android.',
-                locations: 'Partner with Stammtisch to bring regular groups to your restaurant or bar. Increase weekday traffic and build loyal customers.'
+                locations: 'Partner with Stammtisch to bring regular groups to your restaurant or bar. Increase weekday traffic and build loyal customers.',
+                privacy: 'Privacy Policy for Stammtisch, including how we collect, use, protect, and retain personal information.',
+                terms: 'Terms of Service for Stammtisch, including user responsibilities, service limitations, venue terms, and contact information.',
+                join: 'Join a Stammtisch group from your invitation link.'
             },
             strings: {}
         },
@@ -32,7 +35,10 @@
             },
             metaDescription: {
                 home: 'Stammtisch.pro - Schluss mit endlosen Gruppenchats. Finde automatisch den besten Tag, die beste Uhrzeit und den besten Ort für euer nächstes Treffen. Verfügbar für iOS und Android.',
-                locations: 'Partner werden mit Stammtisch und regelmäßige Gruppen in dein Restaurant oder deine Bar bringen. Mehr Auslastung unter der Woche und treue Gäste aufbauen.'
+                locations: 'Partner werden mit Stammtisch und regelmäßige Gruppen in dein Restaurant oder deine Bar bringen. Mehr Auslastung unter der Woche und treue Gäste aufbauen.',
+                privacy: 'Datenschutzerklärung für Stammtisch, einschließlich Erhebung, Nutzung, Schutz und Speicherung personenbezogener Informationen.',
+                terms: 'Nutzungsbedingungen für Stammtisch, einschließlich Nutzerpflichten, Leistungsgrenzen, Lokalbedingungen und Kontaktinformationen.',
+                join: 'Einer Stammtisch-Gruppe über deinen Einladungslink beitreten.'
             },
             strings: {
                 'Your group chat is full of plans that never happen.': 'Euer Gruppenchat ist voll mit Plänen, die nie stattfinden.',
@@ -210,7 +216,10 @@
             },
             metaDescription: {
                 home: 'Stammtisch.pro - Deja atras los chats de grupo interminables. Encuentra automaticamente el mejor dia, hora y lugar para tu proxima reunion. Disponible en iOS y Android.',
-                locations: 'Asociate con Stammtisch para llevar grupos habituales a tu restaurante o bar. Aumenta el trafico entre semana y crea clientes fieles.'
+                locations: 'Asociate con Stammtisch para llevar grupos habituales a tu restaurante o bar. Aumenta el trafico entre semana y crea clientes fieles.',
+                privacy: 'Politica de privacidad de Stammtisch, incluida la forma en que recopilamos, usamos, protegemos y conservamos informacion personal.',
+                terms: 'Terminos de servicio de Stammtisch, incluidas responsabilidades del usuario, limitaciones del servicio, condiciones para locales e informacion de contacto.',
+                join: 'Unete a un grupo de Stammtisch desde tu enlace de invitacion.'
             },
             strings: {
                 'Your group chat is full of plans that never happen.': 'Tu chat de grupo esta lleno de planes que nunca ocurren.',
@@ -388,7 +397,10 @@
             },
             metaDescription: {
                 home: 'Stammtisch.pro - Fini les discussions de groupe interminables. Trouvez automatiquement le meilleur jour, la meilleure heure et le meilleur lieu pour votre prochaine rencontre. Disponible sur iOS et Android.',
-                locations: 'Devenez partenaire de Stammtisch pour accueillir des groupes reguliers dans votre restaurant ou bar. Augmentez la frequentation en semaine et fidelisez vos clients.'
+                locations: 'Devenez partenaire de Stammtisch pour accueillir des groupes reguliers dans votre restaurant ou bar. Augmentez la frequentation en semaine et fidelisez vos clients.',
+                privacy: 'Politique de confidentialite de Stammtisch, notamment la collecte, l’utilisation, la protection et la conservation des informations personnelles.',
+                terms: 'Conditions d’utilisation de Stammtisch, notamment les responsabilites des utilisateurs, les limites du service, les conditions pour les lieux et les coordonnees.',
+                join: 'Rejoignez un groupe Stammtisch depuis votre lien d’invitation.'
             },
             strings: {
                 'Your group chat is full of plans that never happen.': 'Votre discussion de groupe est pleine de projets qui ne se concretisent jamais.',
@@ -564,6 +576,67 @@
         fr: 'Remarque : cette page a ete localisee pour le site web. Pour toute interpretation juridique, la version anglaise prevaut sauf publication d’une traduction revisee.'
     };
 
+    const legalHighlights = {
+        privacy: {
+            de: {
+                title: 'Kurzüberblick',
+                items: [
+                    'Wir erfassen Konto-, Profil-, Event-, Kommunikations-, Nutzungs- und Geräteinformationen, soweit sie für den Dienst erforderlich sind.',
+                    'Wir nutzen Daten zur Bereitstellung, Verbesserung, Sicherheit und, mit Einwilligung, für Produktneuigkeiten.',
+                    'Wir verkaufen keine personenbezogenen Daten und teilen Informationen nur mit Gruppenmitgliedern, Dienstleistern oder wenn es rechtlich erforderlich ist.',
+                    'Sie können Auskunft, Berichtigung, Löschung, Portabilität, Einschränkung oder Widerspruch verlangen.'
+                ]
+            },
+            es: {
+                title: 'Resumen',
+                items: [
+                    'Recopilamos informacion de cuenta, perfil, eventos, comunicaciones, uso y dispositivo cuando es necesaria para prestar el servicio.',
+                    'Usamos datos para prestar y mejorar el servicio, mantener la seguridad y, con consentimiento, enviar novedades del producto.',
+                    'No vendemos datos personales y solo compartimos informacion con miembros del grupo, proveedores de servicio o cuando la ley lo exige.',
+                    'Puedes solicitar acceso, rectificacion, eliminacion, portabilidad, limitacion u oposicion al tratamiento.'
+                ]
+            },
+            fr: {
+                title: 'Résumé',
+                items: [
+                    'Nous collectons les informations de compte, profil, evenement, communication, utilisation et appareil lorsqu’elles sont necessaires au service.',
+                    'Nous utilisons les donnees pour fournir et ameliorer le service, assurer la securite et, avec consentement, envoyer des actualites produit.',
+                    'Nous ne vendons pas les donnees personnelles et ne les partageons qu’avec les membres du groupe, les prestataires ou lorsque la loi l’exige.',
+                    'Vous pouvez demander l’acces, la rectification, l’effacement, la portabilite, la limitation ou l’opposition au traitement.'
+                ]
+            }
+        },
+        terms: {
+            de: {
+                title: 'Kurzüberblick',
+                items: [
+                    'Mit der Nutzung von Stammtisch akzeptieren Sie diese Bedingungen und unsere Datenschutzerklärung.',
+                    'Stammtisch hilft Gruppen beim Organisieren von Treffen, veranstaltet oder kontrolliert die Treffen selbst jedoch nicht.',
+                    'Nutzer sind für rechtmäßige Nutzung, respektvolles Verhalten und sichere Kontodaten verantwortlich.',
+                    'Lokale und Treffen erfolgen auf eigene Verantwortung; Stammtisch garantiert keine bestimmten Ergebnisse.'
+                ]
+            },
+            es: {
+                title: 'Resumen',
+                items: [
+                    'Al usar Stammtisch, aceptas estos terminos y nuestra politica de privacidad.',
+                    'Stammtisch ayuda a los grupos a organizar reuniones, pero no organiza ni controla las reuniones reales.',
+                    'Los usuarios son responsables de usar el servicio legalmente, comportarse con respeto y proteger sus credenciales.',
+                    'Los locales y reuniones se visitan bajo responsabilidad propia; Stammtisch no garantiza resultados especificos.'
+                ]
+            },
+            fr: {
+                title: 'Résumé',
+                items: [
+                    'En utilisant Stammtisch, vous acceptez ces conditions et notre politique de confidentialite.',
+                    'Stammtisch aide les groupes a organiser des rencontres, mais n’organise ni ne controle les rencontres elles-memes.',
+                    'Les utilisateurs sont responsables d’une utilisation conforme a la loi, d’un comportement respectueux et de la securite de leur compte.',
+                    'Les lieux et rencontres sont frequentes a vos propres risques ; Stammtisch ne garantit aucun resultat specifique.'
+                ]
+            }
+        }
+    };
+
     function getPageKey() {
         const path = window.location.pathname;
         if (path.includes('locations')) return 'locations';
@@ -604,42 +677,50 @@
         style.textContent = `
             .language-switcher {
                 position: fixed;
-                top: 16px;
-                right: 16px;
+                top: 18px;
+                right: 18px;
                 z-index: 1000;
                 display: flex;
                 align-items: center;
-                gap: 8px;
-                padding: 8px 10px;
-                border: 1px solid rgba(255, 255, 255, 0.35);
-                border-radius: 12px;
-                background: rgba(255, 255, 255, 0.16);
+                gap: 10px;
+                padding: 9px 12px;
+                border: 1px solid rgba(255, 255, 255, 0.42);
+                border-radius: 999px;
+                background: rgba(37, 34, 89, 0.42);
                 color: white;
-                backdrop-filter: blur(12px);
-                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+                backdrop-filter: blur(16px);
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
             }
             .language-switcher label {
                 margin: 0;
-                font-size: 0.85rem;
+                font-size: 0.78rem;
                 font-weight: 700;
+                letter-spacing: 0;
                 line-height: 1;
+                text-transform: uppercase;
+                opacity: 0.9;
             }
             .language-switcher select {
                 width: auto;
-                min-width: 116px;
-                padding: 8px 30px 8px 10px;
+                min-width: 118px;
+                padding: 8px 30px 8px 12px;
                 border: 1px solid rgba(255, 255, 255, 0.35);
-                border-radius: 8px;
-                background: rgba(255, 255, 255, 0.94);
-                color: #4f46a5;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.96);
+                color: #3f358f;
                 font: inherit;
                 font-weight: 700;
+                cursor: pointer;
+            }
+            .language-switcher select:focus {
+                outline: 2px solid rgba(255, 255, 255, 0.9);
+                outline-offset: 2px;
             }
             @media (max-width: 520px) {
                 .language-switcher {
                     top: 8px;
                     right: 8px;
-                    padding: 6px;
+                    padding: 6px 7px;
                 }
                 .language-switcher label {
                     position: absolute;
@@ -679,6 +760,7 @@
         select.value = currentLanguage;
         select.addEventListener('change', () => {
             localStorage.setItem('stammtisch_language', select.value);
+            updateLanguageUrl(select.value);
             applyLanguage(select.value);
         });
 
@@ -741,13 +823,34 @@
     function translateMetadata(language) {
         const page = getPageKey();
         const languageData = pageText[language];
+        const fallbackData = pageText.en;
+        const title = languageData.title[page] || fallbackData.title[page] || document.title;
+        const descriptionText = languageData.metaDescription[page] || fallbackData.metaDescription[page] || '';
         document.documentElement.lang = language;
-        document.title = languageData.title[page] || pageText.en.title[page] || document.title;
+        document.title = title;
 
         const description = document.querySelector('meta[name="description"]');
-        if (description && languageData.metaDescription[page]) {
-            description.setAttribute('content', languageData.metaDescription[page]);
+        if (description && descriptionText) {
+            description.setAttribute('content', descriptionText);
         }
+
+        setMeta('property', 'og:title', title);
+        setMeta('property', 'og:description', descriptionText);
+        setMeta('name', 'twitter:title', title);
+        setMeta('name', 'twitter:description', descriptionText);
+    }
+
+    function setMeta(attribute, key, value) {
+        if (!value) return;
+        const element = document.querySelector(`meta[${attribute}="${key}"]`);
+        if (element) element.setAttribute('content', value);
+    }
+
+    function updateLanguageUrl(language) {
+        if (!window.history || !window.history.replaceState) return;
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', language);
+        window.history.replaceState({}, '', url.toString());
     }
 
     function addLegalNotice(language) {
@@ -771,6 +874,48 @@
         }
     }
 
+    function addLegalHighlights(language) {
+        document.querySelectorAll('.i18n-legal-highlights').forEach((element) => element.remove());
+        if (language === 'en') return;
+
+        const page = getPageKey();
+        const highlights = legalHighlights[page] && legalHighlights[page][language];
+        if (!highlights) return;
+
+        const container = document.querySelector('.container');
+        if (!container) return;
+
+        const panel = document.createElement('section');
+        panel.className = 'i18n-legal-highlights';
+        panel.style.cssText = 'background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 12px; padding: 20px 22px; margin: 0 0 28px;';
+
+        const heading = document.createElement('h2');
+        heading.textContent = highlights.title;
+        heading.style.cssText = 'font-size: 1.35rem; margin: 0 0 12px;';
+        panel.appendChild(heading);
+
+        const list = document.createElement('ul');
+        list.style.cssText = 'margin: 0; padding-left: 22px;';
+        highlights.items.forEach((item) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = item;
+            list.appendChild(listItem);
+        });
+        panel.appendChild(list);
+
+        const notice = container.querySelector('.i18n-legal-notice');
+        if (notice && notice.nextSibling) {
+            notice.parentNode.insertBefore(panel, notice.nextSibling);
+        } else {
+            const firstHeading = container.querySelector('h1');
+            if (firstHeading && firstHeading.nextSibling) {
+                firstHeading.parentNode.insertBefore(panel, firstHeading.nextSibling);
+            } else {
+                container.prepend(panel);
+            }
+        }
+    }
+
     function applyLanguage(language) {
         const normalizedLanguage = normalizeLanguage(language) || 'en';
         activeLanguage = normalizedLanguage;
@@ -782,6 +927,7 @@
         translateTextNodes(normalizedLanguage);
         translateAttributes(normalizedLanguage);
         addLegalNotice(normalizedLanguage);
+        addLegalHighlights(normalizedLanguage);
         observeChanges();
     }
 
