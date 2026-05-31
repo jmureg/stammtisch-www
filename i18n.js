@@ -41,6 +41,10 @@
                 join: 'Einer Stammtisch-Gruppe über deinen Einladungslink beitreten.'
             },
             strings: {
+                'What is a Stammtisch?': 'Was ist ein Stammtisch?',
+                'A Stammtisch is a long-running German-speaking tradition: a regular table where people gather again and again to share conversation, food, drinks, and community.': 'Ein Stammtisch ist eine lange deutschsprachige Tradition: ein regelmäßiger Tisch, an dem Menschen immer wieder zusammenkommen, um Gespräche, Essen, Getränke und Gemeinschaft zu teilen.',
+                'Today, a Stammtisch can be more flexible. It can move between favorite places, adapt to changing schedules, and help a group find the best date, time, and location without endless back-and-forth.': 'Heute kann ein Stammtisch flexibler sein. Er kann zwischen Lieblingsorten wechseln, sich an veränderte Zeitpläne anpassen und einer Gruppe helfen, den besten Termin, die beste Uhrzeit und den besten Ort zu finden, ohne endloses Hin und Her.',
+                'Stammtisch.pro brings that practice into modern life: stay close to existing friends, make room for new connections, and turn good intentions into real meetups.': 'Stammtisch.pro bringt diese Praxis ins moderne Leben: mit bestehenden Freunden verbunden bleiben, Raum für neue Kontakte schaffen und gute Vorsätze in echte Treffen verwandeln.',
                 'Your group chat is full of plans that never happen.': 'Euer Gruppenchat ist voll mit Plänen, die nie stattfinden.',
                 '"Does Friday work?"': '"Passt Freitag?"',
                 '"I can\'t."': '"Ich kann nicht."',
@@ -222,6 +226,10 @@
                 join: 'Unete a un grupo de Stammtisch desde tu enlace de invitacion.'
             },
             strings: {
+                'What is a Stammtisch?': '¿Qué es un Stammtisch?',
+                'A Stammtisch is a long-running German-speaking tradition: a regular table where people gather again and again to share conversation, food, drinks, and community.': 'Un Stammtisch es una tradición de larga data en los países de habla alemana: una mesa habitual donde las personas se reúnen una y otra vez para compartir conversación, comida, bebidas y comunidad.',
+                'Today, a Stammtisch can be more flexible. It can move between favorite places, adapt to changing schedules, and help a group find the best date, time, and location without endless back-and-forth.': 'Hoy, un Stammtisch puede ser más flexible. Puede moverse entre lugares favoritos, adaptarse a horarios cambiantes y ayudar a un grupo a encontrar la mejor fecha, hora y ubicación sin idas y vueltas interminables.',
+                'Stammtisch.pro brings that practice into modern life: stay close to existing friends, make room for new connections, and turn good intentions into real meetups.': 'Stammtisch.pro lleva esa práctica a la vida moderna: mantén cerca a tus amigos, abre espacio para nuevas conexiones y convierte las buenas intenciones en encuentros reales.',
                 'Your group chat is full of plans that never happen.': 'Tu chat de grupo esta lleno de planes que nunca ocurren.',
                 '"Does Friday work?"': '"¿El viernes va bien?"',
                 '"I can\'t."': '"No puedo."',
@@ -403,6 +411,10 @@
                 join: 'Rejoignez un groupe Stammtisch depuis votre lien d’invitation.'
             },
             strings: {
+                'What is a Stammtisch?': 'Qu’est-ce qu’un Stammtisch ?',
+                'A Stammtisch is a long-running German-speaking tradition: a regular table where people gather again and again to share conversation, food, drinks, and community.': 'Un Stammtisch est une tradition ancienne des pays germanophones : une table régulière où les gens se retrouvent encore et encore pour partager conversation, repas, boissons et esprit de communauté.',
+                'Today, a Stammtisch can be more flexible. It can move between favorite places, adapt to changing schedules, and help a group find the best date, time, and location without endless back-and-forth.': 'Aujourd’hui, un Stammtisch peut être plus flexible. Il peut changer de lieu favori, s’adapter aux emplois du temps et aider un groupe à trouver la meilleure date, la meilleure heure et le meilleur endroit sans échanges interminables.',
+                'Stammtisch.pro brings that practice into modern life: stay close to existing friends, make room for new connections, and turn good intentions into real meetups.': 'Stammtisch.pro fait entrer cette pratique dans la vie moderne : rester proche de ses amis, laisser de la place aux nouvelles rencontres et transformer les bonnes intentions en vrais rendez-vous.',
                 'Your group chat is full of plans that never happen.': 'Votre discussion de groupe est pleine de projets qui ne se concretisent jamais.',
                 '"Does Friday work?"': '"Vendredi, ca marche ?"',
                 '"I can\'t."': '"Je ne peux pas."',
