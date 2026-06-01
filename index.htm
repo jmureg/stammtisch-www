@@ -431,8 +431,17 @@
         }
 
         @media (max-width: 600px) {
-            .steps { flex-direction: column; gap: 5px; }
-            .step-arrow { transform: rotate(90deg); padding-bottom: 0; }
+            .steps {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .step-arrow {
+                transform: rotate(90deg);
+                padding-bottom: 0;
+                margin: 4px 0;
+            }
         }
 
         footer {
