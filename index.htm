@@ -191,6 +191,65 @@
             margin-right: auto;
         }
 
+        .product-preview {
+            margin-top: 72px;
+            max-width: 1040px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .product-preview h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 750;
+        }
+
+        .product-preview > p {
+            max-width: 620px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            align-items: start;
+        }
+
+        .screenshot-card {
+            text-align: left;
+        }
+
+        .phone-frame {
+            overflow: hidden;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.26);
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.24);
+        }
+
+        .phone-frame img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .screenshot-card h3 {
+            font-size: 1.08rem;
+            margin: 18px 0 8px;
+        }
+
+        .screenshot-card p {
+            font-size: 0.95rem;
+            line-height: 1.55;
+            opacity: 0.86;
+        }
+
         .feature {
             background: rgba(255, 255, 255, 0.1);
             padding: 30px;
@@ -487,6 +546,23 @@
                 grid-template-columns: 1fr;
             }
 
+            .product-preview {
+                margin-top: 58px;
+            }
+
+            .screenshot-grid {
+                display: flex;
+                gap: 18px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                padding: 4px 2px 18px;
+            }
+
+            .screenshot-card {
+                flex: 0 0 78%;
+                scroll-snap-align: center;
+            }
+
             .stammtisch-intro {
                 padding: 24px 22px;
                 text-align: center;
@@ -565,6 +641,34 @@
         <p style="font-size: 0.9rem; opacity: 0.85; margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
             Android version currently available to whitelisted beta testers. Interested users can request access by submitting their Google Play Store-associated email address below.
         </p>
+
+        <section class="product-preview">
+            <h2>See how Stammtisch works</h2>
+            <p>Create your group, coordinate the plan, and keep the habit going with simple tools built for real meetups.</p>
+            <div class="screenshot-grid">
+                <article class="screenshot-card">
+                    <div class="phone-frame">
+                        <img src="assets/web/create-stammtisch.jpg" alt="Create a Stammtisch group in the app">
+                    </div>
+                    <h3>Create your group</h3>
+                    <p>Start with the essentials and decide whether your group is public or private.</p>
+                </article>
+                <article class="screenshot-card">
+                    <div class="phone-frame">
+                        <img src="assets/web/coordinate-plan.jpg" alt="Coordinate dates, places, votes, and chat">
+                    </div>
+                    <h3>Coordinate the plan</h3>
+                    <p>Collect date and place ideas, vote together, and keep the conversation in one place.</p>
+                </article>
+                <article class="screenshot-card">
+                    <div class="phone-frame">
+                        <img src="assets/web/keep-meeting.jpg" alt="Track meeting streaks and attendance">
+                    </div>
+                    <h3>Keep meeting</h3>
+                    <p>See your rhythm, track attendance, and make the next gathering feel natural.</p>
+                </article>
+            </div>
+        </section>
 
         <div class="features">
             <div class="feature">
