@@ -694,10 +694,18 @@
         return supportedLanguages.includes(base) ? base : null;
     }
 
+    function languageFromPath() {
+        const pathLanguage = window.location.pathname.split('/').filter(Boolean)[0];
+        return normalizeLanguage(pathLanguage);
+    }
+
     function detectLanguage() {
         const params = new URLSearchParams(window.location.search);
         const fromQuery = normalizeLanguage(params.get('lang'));
         if (fromQuery) return fromQuery;
+
+        const fromPath = languageFromPath();
+        if (fromPath) return fromPath;
 
         const saved = normalizeLanguage(localStorage.getItem('stammtisch_language'));
         if (saved) return saved;
@@ -802,8 +810,9 @@
         select.value = currentLanguage;
         select.addEventListener('change', () => {
             localStorage.setItem('stammtisch_language', select.value);
-            updateLanguageUrl(select.value);
-            applyLanguage(select.value);
+            if (!updateLanguageUrl(select.value)) {
+                applyLanguage(select.value);
+            }
         });
 
         wrapper.append(label, select);
@@ -890,9 +899,19 @@
 
     function updateLanguageUrl(language) {
         if (!window.history || !window.history.replaceState) return;
+        if (getPageKey() === 'home') {
+            const target = language === 'en' ? '/' : `/${language}/`;
+            if (window.location.pathname !== target) {
+                window.location.assign(target);
+                return true;
+            }
+            return false;
+        }
+
         const url = new URL(window.location.href);
         url.searchParams.set('lang', language);
         window.history.replaceState({}, '', url.toString());
+        return false;
     }
 
     function addLegalNotice(language) {
