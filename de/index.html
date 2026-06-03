@@ -268,6 +268,8 @@
 
         .phone-frame {
             overflow: hidden;
+            max-width: 260px;
+            margin: 0 auto;
             border-radius: 28px;
             background: rgba(255, 255, 255, 0.16);
             border: 1px solid rgba(255, 255, 255, 0.26);
@@ -277,17 +279,23 @@
         .phone-frame img {
             display: block;
             width: 100%;
-            aspect-ratio: 9 / 16;
-            object-fit: cover;
-            object-position: top center;
+            height: auto;
+            background: #f7f5f0;
         }
 
         .screenshot-card h3 {
+            max-width: 260px;
+            margin-left: auto;
+            margin-right: auto;
             font-size: 1.08rem;
-            margin: 18px 0 8px;
+            margin-top: 18px;
+            margin-bottom: 8px;
         }
 
         .screenshot-card p {
+            max-width: 260px;
+            margin-left: auto;
+            margin-right: auto;
             font-size: 0.95rem;
             line-height: 1.55;
             opacity: 0.86;
@@ -438,6 +446,12 @@
 
         .stammtisch-intro p:last-child {
             margin-bottom: 0;
+        }
+
+        .stammtisch-intro a {
+            color: white;
+            font-weight: 700;
+            text-underline-offset: 4px;
         }
 
         .hero-problem .lead {
@@ -630,6 +644,7 @@
             <p>Ein Stammtisch ist eine lange deutschsprachige Tradition: ein regelmäßiger Tisch, an dem Menschen immer wieder zusammenkommen, um Gespräche, Essen, Getränke und Gemeinschaft zu teilen.</p>
             <p>Heute kann ein Stammtisch flexibler sein. Er kann zwischen Lieblingsorten wechseln, sich an veränderte Zeitpläne anpassen und einer Gruppe helfen, den besten Termin, die beste Uhrzeit und den besten Ort zu finden, ohne endloses Hin und Her.</p>
             <p>Stammtisch.pro bringt diese Praxis ins moderne Leben: mit bestehenden Freunden verbunden bleiben, Raum für neue Kontakte schaffen und gute Vorsätze in echte Treffen verwandeln.</p>
+            <p><a href="de/what-is-a-stammtisch.html">Den vollständigen Stammtisch-Guide lesen</a></p>
         </section>
 
         <div class="hero-problem">
@@ -762,7 +777,7 @@
                         <li>Notifications &amp; email</li>
                         <li>Kalenderintegration</li>
                     </ul>
-                    <a href="https://stammtisch.pro" class="card-cta">Loslegen</a>
+                    <a href="https://apps.apple.com/us/app/stammtisch/id6759274599" class="card-cta">Loslegen</a>
                 </div>
                 <div class="pricing-card pro">
                     <h3>Pro</h3>
@@ -777,7 +792,7 @@
                         <li>Datenexport</li>
                         <li>Priorisierter Support</li>
                     </ul>
-                    <a href="https://stammtisch.pro" class="card-cta">Start Kostenlos Trial</a>
+                    <a href="https://apps.apple.com/us/app/stammtisch/id6759274599" class="card-cta">Start Kostenlos Trial</a>
                     <p class="trial-note">3 Monate kostenlose Testphase inklusive</p>
                 </div>
             </div>
@@ -798,7 +813,7 @@
         <div class="partner-cta" style="margin-top: 80px; padding: 50px 40px; background: rgba(255, 255, 255, 0.1); border-radius: 25px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); text-align: center;">
             <h2 style="font-size: 2rem; margin-bottom: 15px; font-weight: 700;">Du besitzt ein Restaurant oder eine Bar?</h2>
             <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.95;">Werde Partner von Stammtisch und erreiche Gruppen, die nach Orten suchen. Hilf, ruhigere Zeiten zu beleben und Community-Verbindungen aufzubauen.</p>
-            <a href="locations.html" class="btn" style="display: inline-flex;">
+            <a href="locations.html?lang=de" class="btn" style="display: inline-flex;">
                 Partnerprogramm ansehen
             </a>
         </div>
@@ -807,8 +822,9 @@
             <p><strong>Stammtisch</strong></p>
             <p>© 2026 www.stammtisch.pro</p>
             <p style="margin-top: 15px;">
-                <a href="terms.html" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Nutzungsbedingungen</a> · 
-                <a href="privacy.html" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Datenschutzerklärung</a>
+                <a href="terms.html?lang=de" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Nutzungsbedingungen</a> · 
+                <a href="privacy.html?lang=de" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Datenschutzerklärung</a> ·
+                <a href="de/what-is-a-stammtisch.html" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Was ist ein Stammtisch?</a>
             </p>
             <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.7;">
                 By using Stammtisch, you agree to our Nutzungsbedingungen. Users attend gatherings at their own risk.

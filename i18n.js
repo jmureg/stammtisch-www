@@ -695,8 +695,11 @@
     }
 
     function languageFromPath() {
-        const pathLanguage = window.location.pathname.split('/').filter(Boolean)[0];
-        return normalizeLanguage(pathLanguage);
+        const pathSegments = window.location.pathname.split('/').filter(Boolean);
+        if (window.location.protocol === 'file:') {
+            return pathSegments.map(normalizeLanguage).find(Boolean) || null;
+        }
+        return normalizeLanguage(pathSegments[0]);
     }
 
     function detectLanguage() {
@@ -900,8 +903,8 @@
     function updateLanguageUrl(language) {
         if (!window.history || !window.history.replaceState) return;
         if (getPageKey() === 'home') {
-            const target = language === 'en' ? '/' : `/${language}/`;
-            if (window.location.pathname !== target) {
+            const target = homepageUrl(language);
+            if (window.location.href !== target) {
                 window.location.assign(target);
                 return true;
             }
@@ -912,6 +915,17 @@
         url.searchParams.set('lang', language);
         window.history.replaceState({}, '', url.toString());
         return false;
+    }
+
+    function homepageUrl(language) {
+        if (window.location.protocol === 'file:') {
+            const currentPath = window.location.pathname;
+            const isLocalizedFile = /\/(?:de|es|fr)\/index\.html$/i.test(currentPath);
+            const base = isLocalizedFile ? new URL('../', window.location.href) : new URL('./', window.location.href);
+            return new URL(language === 'en' ? 'index.htm' : `${language}/index.html`, base).href;
+        }
+
+        return new URL(language === 'en' ? '/' : `/${language}/`, window.location.origin).href;
     }
 
     function addLegalNotice(language) {
