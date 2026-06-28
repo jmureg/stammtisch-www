@@ -18,6 +18,11 @@
     <meta name="twitter:title" content="Join Stammtisch">
     <meta name="twitter:description" content="Join a Stammtisch group from your invitation link.">
     <meta name="twitter:image" content="https://stammtisch.pro/logo.png">
+    <script>
+        window.STAMMTISCH_GA_ID = 'G-LELECKYNXW';
+        window.STAMMTISCH_ANALYTICS_CONSENT_KEY = 'stammtisch_analytics_consent';
+        window['ga-disable-G-LELECKYNXW'] = localStorage.getItem(window.STAMMTISCH_ANALYTICS_CONSENT_KEY) !== 'granted';
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LELECKYNXW"></script>
     <script src="../i18n.js"></script>
     <script>
@@ -82,5 +87,6 @@
             document.getElementById('fallback').style.display = 'block';
         }, 2000);
     </script>
+    <script src="../cookie-consent.js"></script>
 </body>
 </html>

@@ -24,6 +24,11 @@
     <meta name="twitter:title" content="What Is a Stammtisch?">
     <meta name="twitter:description" content="Learn the meaning, tradition, and modern version of a Stammtisch.">
     <meta name="twitter:image" content="https://stammtisch.pro/logo.png">
+    <script>
+        window.STAMMTISCH_GA_ID = 'G-LELECKYNXW';
+        window.STAMMTISCH_ANALYTICS_CONSENT_KEY = 'stammtisch_analytics_consent';
+        window['ga-disable-G-LELECKYNXW'] = localStorage.getItem(window.STAMMTISCH_ANALYTICS_CONSENT_KEY) !== 'granted';
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LELECKYNXW"></script>
     <script type="application/ld+json">
     {
@@ -222,7 +227,7 @@
         </article>
 
         <footer>
-            <p><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></p>
+            <p><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="community-guidelines.html">Guidelines</a> · <a href="delete-account.html">Delete account</a></p>
         </footer>
     </div>
     <script>
@@ -237,5 +242,6 @@
             window.location.href = new URL(paths[this.value], document.baseURI).href;
         });
     </script>
+    <script src="cookie-consent.js"></script>
 </body>
 </html>

@@ -25,6 +25,11 @@
     <meta name="twitter:title" content="Stammtisch.pro - Retrouvez vos amis">
     <meta name="twitter:description" content="Fini les discussions de groupe interminables. Trouvez automatiquement le meilleur jour, la meilleure heure et le meilleur lieu pour votre prochaine rencontre.">
     <meta name="twitter:image" content="https://stammtisch.pro/logo.png">
+    <script>
+        window.STAMMTISCH_GA_ID = 'G-LELECKYNXW';
+        window.STAMMTISCH_ANALYTICS_CONSENT_KEY = 'stammtisch_analytics_consent';
+        window['ga-disable-G-LELECKYNXW'] = localStorage.getItem(window.STAMMTISCH_ANALYTICS_CONSENT_KEY) !== 'granted';
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LELECKYNXW"></script>
     <script src="i18n.js"></script>
     <script type="application/ld+json">
@@ -644,7 +649,7 @@
             <p>Un Stammtisch est une tradition ancienne des pays germanophones : une table régulière où les gens se retrouvent encore et encore pour partager conversation, repas, boissons et esprit de communauté.</p>
             <p>Aujourd’hui, un Stammtisch peut être plus flexible. Il peut changer de lieu favori, s’adapter aux emplois du temps et aider un groupe à trouver la meilleure date, la meilleure heure et le meilleur endroit sans échanges interminables.</p>
             <p>Stammtisch.pro fait entrer cette pratique dans la vie moderne : rester proche de ses amis, laisser de la place aux nouvelles rencontres et transformer les bonnes intentions en vrais rendez-vous.</p>
-            <p><a href="fr/what-is-a-stammtisch.html">Lire le guide complet sur le Stammtisch</a></p>
+            <p><a href="what-is-a-stammtisch.html">Lire le guide complet sur le Stammtisch</a></p>
         </section>
 
         <div class="hero-problem">
@@ -697,7 +702,7 @@
         </div>
 
         <p style="font-size: 0.9rem; opacity: 0.85; margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
-            La version Android est actuellement disponible pour les bêta-testeurs autorisés. Les personnes intéressées peuvent demander l’accès en indiquant ci-dessous l’adresse e-mail associée à Google Play Store.
+            Disponible sur iOS et Android. Créez un groupe, invitez vos amis, votez pour les dates et les lieux, et gardez le rythme.
         </p>
 
         <section class="product-preview">
@@ -822,9 +827,11 @@
             <p><strong>Stammtisch</strong></p>
             <p>© 2026 www.stammtisch.pro</p>
             <p style="margin-top: 15px;">
-                <a href="terms.html?lang=fr" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Conditions d’utilisation</a> · 
-                <a href="privacy.html?lang=fr" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Politique de confidentialité</a> ·
-                <a href="fr/what-is-a-stammtisch.html" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Qu’est-ce qu’un Stammtisch ?</a>
+                <a href="../terms.html?lang=fr" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Conditions d’utilisation</a> ·
+                <a href="../privacy.html?lang=fr" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Politique de confidentialité</a> ·
+                <a href="../community-guidelines.html?lang=fr" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Règles de la communauté</a> ·
+                <a href="../delete-account.html?lang=fr" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Supprimer le compte</a> ·
+                <a href="what-is-a-stammtisch.html" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Qu’est-ce qu’un Stammtisch ?</a>
             </p>
             <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.7;">
                 En utilisant Stammtisch, vous acceptez nos Conditions d’utilisation. Les utilisateurs participent aux rencontres à leurs propres risques.
@@ -879,5 +886,6 @@
             }
         });
     </script>
+    <script src="../cookie-consent.js"></script>
 </body>
 </html>

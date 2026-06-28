@@ -24,6 +24,11 @@
     <meta name="twitter:title" content="Privacy Policy - Stammtisch">
     <meta name="twitter:description" content="How Stammtisch collects, uses, protects, and retains personal information.">
     <meta name="twitter:image" content="https://stammtisch.pro/logo.png">
+    <script>
+        window.STAMMTISCH_GA_ID = 'G-LELECKYNXW';
+        window.STAMMTISCH_ANALYTICS_CONSENT_KEY = 'stammtisch_analytics_consent';
+        window['ga-disable-G-LELECKYNXW'] = localStorage.getItem(window.STAMMTISCH_ANALYTICS_CONSENT_KEY) !== 'granted';
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LELECKYNXW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -198,193 +203,118 @@
     <h1>Privacy Policy</h1>
     
     <div class="effective-date">
-        <strong>Effective Date:</strong> January 26, 2026<br>
-        <strong>Last Updated:</strong> January 26, 2026
+        <strong>Effective Date:</strong> June 27, 2026<br>
+        <strong>Last Updated:</strong> June 27, 2026
     </div>
 
     <h2>1. Introduction</h2>
-    <p>Stammtisch ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our event management platform, including our mobile applications, web applications, and website (collectively, the "Service").</p>
+    <p>Stammtisch ("we," "our," or "us") provides mobile apps and website services that help people create recurring social groups, invite members, suggest dates and places, vote, RSVP, receive reminders, and keep a history of gatherings (the "Service").</p>
 
-    <p>This policy applies to all users worldwide and complies with applicable privacy laws including the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and other relevant privacy regulations.</p>
+    <p>This Privacy Policy explains what information we collect, how we use it, when we share it, and how you can contact us about privacy requests. We design the Service to support privacy rights under laws such as the GDPR, UK GDPR, CCPA/CPRA, and other applicable privacy laws where they apply.</p>
 
     <h2>2. Information We Collect</h2>
 
-    <h3>2.1 Information You Provide Directly</h3>
+    <h3>2.1 Information You Provide</h3>
     <ul>
-        <li><strong>Account Information:</strong> Email address, display name, password (encrypted)</li>
-        <li><strong>Profile Information:</strong> Optional profile details, preferences, and settings</li>
-        <li><strong>Event Data:</strong> Event details, RSVPs, location preferences, and voting data</li>
-        <li><strong>Communications:</strong> Messages, invitations, and notifications you send through our Service</li>
-        <li><strong>Email Subscriptions:</strong> Email addresses submitted for product updates and newsletters</li>
+        <li><strong>Account information:</strong> Email address, display name, password credentials handled through Firebase Authentication, email verification status, account status, and login metadata.</li>
+        <li><strong>Profile and preference information:</strong> Language, hometown or location fields, notification preferences, profile photos, and app settings.</li>
+        <li><strong>Stammtisch content:</strong> Group names, descriptions, visibility settings, photos, member lists, pending join requests, invitations, proposed dates, proposed locations, votes, RSVPs, comments or messages where available, and event history.</li>
+        <li><strong>Communications:</strong> Emails, push notifications, support requests, partner venue submissions, contact form messages, and similar communications you send or receive through the Service.</li>
+        <li><strong>Venue and website form information:</strong> Venue name, contact person, email, phone number, address, website, availability, special offers, and other details submitted through the website.</li>
     </ul>
 
     <h3>2.2 Information Collected Automatically</h3>
     <ul>
-        <li><strong>Usage Data:</strong> App interactions, feature usage, and session information</li>
-        <li><strong>Device Information:</strong> Device type, operating system, app version</li>
-        <li><strong>Log Data:</strong> IP addresses, access times, error logs (anonymized where possible)</li>
-        <li><strong>Analytics Data:</strong> Aggregated usage statistics and performance metrics</li>
+        <li><strong>Device and app information:</strong> Device type, operating system, app version, language, diagnostics, crash or error information, and security/app integrity signals.</li>
+        <li><strong>Usage and analytics data:</strong> Website visits, app interactions, feature usage, referral pages, approximate location derived from network information, and aggregated performance data.</li>
+        <li><strong>Log data:</strong> IP address, timestamps, request metadata, authentication events, Cloud Functions logs, Firestore/Storage access logs, and security diagnostics.</li>
+        <li><strong>Push notification data:</strong> Device push tokens, delivery status, and notification read/archived state.</li>
     </ul>
 
-    <h3>2.3 Information from Third Parties</h3>
+    <h3>2.3 Third-Party and Integrated Services</h3>
     <ul>
-        <li><strong>Authentication Services:</strong> If you sign in through third-party providers</li>
-        <li><strong>Payment Processors:</strong> Billing information processed by Stripe (we do not store payment details)</li>
+        <li><strong>Firebase/Google Cloud:</strong> Authentication, Firestore database, Cloud Storage, Cloud Functions, Firebase App Check, Firebase Cloud Messaging, hosting, logging, and related infrastructure.</li>
+        <li><strong>Google Maps and Places:</strong> Location search, place autocomplete, maps, and place details used to suggest or display meeting places.</li>
+        <li><strong>Email providers:</strong> Transactional and operational email delivery, including email verification, welcome emails, reminders, admin alerts, and support messages.</li>
+        <li><strong>Formspree:</strong> Website contact and partner venue form submissions.</li>
+        <li><strong>Google Analytics:</strong> Website analytics used to understand traffic and improve the website.</li>
+        <li><strong>Apple App Store and Google Play:</strong> App distribution, installation, and store-level account/payment information handled by the respective store providers.</li>
+        <li><strong>Payment providers:</strong> If paid plans become available, payment information is processed by the app stores or payment processors. We do not intend to store full payment card details.</li>
     </ul>
 
-    <h2>3. How We Use Your Information</h2>
-
-    <h3>3.1 Service Provision</h3>
+    <h2>3. How We Use Information</h2>
     <ul>
-        <li>Create and manage your account</li>
-        <li>Facilitate event creation, invitations, and RSVPs</li>
-        <li>Process voting and location preferences</li>
-        <li>Send service-related notifications and communications</li>
-        <li>Provide customer support</li>
+        <li>Provide, operate, secure, and improve the Service.</li>
+        <li>Create accounts, verify email addresses, authenticate users, and prevent abuse.</li>
+        <li>Create and manage Stammtisch groups, invitations, join requests, votes, RSVPs, reminders, photos, and event history.</li>
+        <li>Send transactional emails, push notifications, RSVP reminders, voting reminders, invite messages, service updates, and support responses.</li>
+        <li>Provide map and place autocomplete functionality.</li>
+        <li>Analyze aggregate usage and diagnose bugs, reliability issues, and security events.</li>
+        <li>Enforce our Terms, investigate misuse, and comply with legal obligations.</li>
+        <li>Send marketing or product updates only where permitted by law and your preferences.</li>
     </ul>
 
-    <h3>3.2 Service Improvement</h3>
+    <h2>4. Legal Bases for Processing</h2>
+    <p>Where GDPR, UK GDPR, or similar laws apply, we rely on the following legal bases:</p>
     <ul>
-        <li>Analyze usage patterns to improve features</li>
-        <li>Monitor and maintain service performance</li>
-        <li>Develop new features and functionality</li>
-        <li>Conduct security monitoring and fraud prevention</li>
+        <li><strong>Contract:</strong> To provide the Service you request, including account, group, invite, vote, RSVP, and notification features.</li>
+        <li><strong>Legitimate interests:</strong> To secure, debug, improve, and operate the Service, prevent fraud or abuse, and understand aggregate usage.</li>
+        <li><strong>Consent:</strong> For optional marketing communications, certain analytics/cookie uses where required, and optional device permissions.</li>
+        <li><strong>Legal obligation:</strong> To comply with law, legal process, tax/accounting obligations, and safety/security requirements.</li>
     </ul>
 
-    <h3>3.3 Marketing Communications</h3>
+    <h2>5. Sharing and Disclosure</h2>
     <ul>
-        <li>Send product updates and newsletters (with consent)</li>
-        <li>Notify about new features and improvements</li>
-        <li>Share relevant event management tips and best practices</li>
+        <li><strong>Within your Stammtisch groups:</strong> Group members may see names, profile details, proposals, votes, RSVPs, photos, comments, and event information needed to coordinate the group.</li>
+        <li><strong>With service providers:</strong> We share information with vendors that host, secure, analyze, deliver, or support the Service, including Firebase/Google Cloud, Google Maps/Places, email providers, Formspree, analytics providers, and app stores.</li>
+        <li><strong>With venues or partners:</strong> If you submit a venue form or intentionally share venue-related details, we may use that information to evaluate or coordinate the venue program.</li>
+        <li><strong>For legal and safety reasons:</strong> We may disclose information when required by law, to protect rights and safety, to investigate abuse, or to enforce our Terms.</li>
+        <li><strong>Business transfers:</strong> Information may be transferred as part of a merger, acquisition, financing, or sale of assets.</li>
     </ul>
 
-    <h2>4. Legal Basis for Processing (GDPR)</h2>
-    <p>We process your personal data based on the following legal grounds:</p>
+    <h3>5.1 We Do Not Sell Personal Information</h3>
+    <p>We do not sell personal information. We also do not share personal information for cross-context behavioral advertising as those terms are commonly used under California privacy law. If this changes, we will update this policy and provide required choices.</p>
+
+    <h2>6. Cookies, Analytics, and Tracking</h2>
+    <p>The website uses Google Analytics and similar technologies to understand traffic and improve the website. Your browser or device settings may let you limit cookies, reset advertising identifiers, or use privacy controls. If required by local law, we will request consent before using non-essential analytics cookies.</p>
+
+    <h2>7. Data Retention and Deletion</h2>
     <ul>
-        <li><strong>Contract Performance:</strong> To provide our Service as agreed</li>
-        <li><strong>Legitimate Interest:</strong> To improve our Service, ensure security, and provide support</li>
-        <li><strong>Consent:</strong> For marketing communications and optional features</li>
-        <li><strong>Legal Obligation:</strong> To comply with applicable laws and regulations</li>
+        <li><strong>Account data:</strong> Kept while your account is active. When you delete your profile, we delete or anonymize the account record and authentication identity where technically available.</li>
+        <li><strong>Group membership data:</strong> Removed or anonymized when your account is deleted, subject to preserving group integrity for other members.</li>
+        <li><strong>Event history and statistics:</strong> Past proposals, votes, RSVP summaries, and event history may be retained in archived or aggregated form so groups can keep their history and statistics without exposing an active deleted profile.</li>
+        <li><strong>Photos and user content:</strong> Removed when you delete the relevant content or account where technically possible, unless retained for legal, safety, backup, or abuse-prevention reasons.</li>
+        <li><strong>Notifications and email records:</strong> Retained for operational, delivery, audit, and support purposes, then deleted or anonymized according to our retention practices.</li>
+        <li><strong>Logs and backups:</strong> Security, diagnostic, and backup data may persist for a limited period before routine deletion.</li>
     </ul>
 
-    <h2>5. Information Sharing and Disclosure</h2>
+    <h2>8. Your Privacy Rights</h2>
+    <p>Depending on where you live, you may have rights to access, correct, delete, export, restrict, object to, or withdraw consent for certain processing of your personal information. California residents may also have the right to know categories of information collected, disclosed, or shared, and to be free from discrimination for exercising privacy rights.</p>
+    <p>To exercise privacy rights, contact us at <strong>privacy@stammtisch.pro</strong>. We may need to verify your identity before completing a request.</p>
 
-    <h3>5.1 We Share Information:</h3>
+    <h2>9. Security</h2>
+    <p>We use reasonable technical and organizational safeguards, including Firebase Authentication, access controls, Firebase App Check, Firestore and Storage rules, HTTPS/TLS, role-based administration, secret management, and security logging. No internet service is perfectly secure, so we cannot guarantee absolute security.</p>
+
+    <h2>10. International Transfers</h2>
+    <p>Your information may be processed in the United States and other countries where we or our service providers operate. Where required, we rely on appropriate safeguards such as contractual commitments, standard contractual clauses, and provider data processing terms.</p>
+
+    <h2>11. Children's Privacy</h2>
+    <p>The Service is not intended for children under 16 or the minimum age required in your jurisdiction. We do not knowingly collect personal information from children. If you believe a child has provided information, contact us so we can take appropriate action.</p>
+
+    <h2>12. User Content, Photos, and Public Visibility</h2>
+    <p>Some content may be visible to other users depending on group visibility and membership. Public groups may expose group names, descriptions, locations, photos, and join/request information more broadly than private groups. Please avoid sharing private addresses, sensitive personal details, or photos you do not have permission to upload.</p>
+
+    <h2>13. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will update the date above and may notify users through the website, app, email, or in-app notices when changes are material.</p>
+
+    <h2>14. Contact</h2>
+    <p>For privacy questions or requests, contact us:</p>
     <ul>
-        <li><strong>Within Your Stammtisch Groups:</strong> Event details and RSVPs with group members</li>
-        <li><strong>Service Providers:</strong> Third-party services that help us operate (Firebase, Stripe, email services)</li>
-        <li><strong>Legal Requirements:</strong> When required by law, court order, or to protect rights and safety</li>
-        <li><strong>Business Transfers:</strong> In connection with mergers, acquisitions, or asset sales</li>
+        <li><strong>Privacy:</strong> privacy@stammtisch.pro</li>
+        <li><strong>Support:</strong> support@stammtisch.pro</li>
+        <li><strong>Website:</strong> https://stammtisch.pro</li>
     </ul>
-
-    <h3>5.2 We Do NOT Sell Your Data</h3>
-    <p>We do not sell, rent, or trade your personal information to third parties for their marketing purposes.</p>
-
-    <h2>6. Data Security</h2>
-    <p>We implement appropriate technical and organizational measures to protect your data:</p>
-    <ul>
-        <li>Encryption in transit and at rest</li>
-        <li>Access controls and authentication</li>
-        <li>Regular security assessments and monitoring</li>
-        <li>Secure cloud infrastructure (Firebase/Google Cloud)</li>
-        <li>Employee training on data protection</li>
-    </ul>
-
-    <h2>7. Data Retention</h2>
-    <ul>
-        <li><strong>Account Data:</strong> Retained while your account is active and for 30 days after deletion</li>
-        <li><strong>Event Data:</strong> Retained for 2 years after event completion for historical purposes</li>
-        <li><strong>Email Subscriptions:</strong> Until you unsubscribe</li>
-        <li><strong>Log Data:</strong> Retained for 90 days for security and debugging purposes</li>
-        <li><strong>Backup Data:</strong> May be retained for up to 1 year in encrypted backups</li>
-    </ul>
-
-    <h2>8. Your Rights (GDPR & CCPA)</h2>
-    <p>You have the following rights regarding your personal data:</p>
-    <ul>
-        <li><strong>Access:</strong> Request a copy of your personal data</li>
-        <li><strong>Rectification:</strong> Correct inaccurate or incomplete data</li>
-        <li><strong>Erasure:</strong> Request deletion of your data ("right to be forgotten")</li>
-        <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format</li>
-        <li><strong>Restriction:</strong> Limit how we process your data</li>
-        <li><strong>Objection:</strong> Object to processing based on legitimate interests</li>
-        <li><strong>Withdraw Consent:</strong> Withdraw consent for consent-based processing</li>
-        <li><strong>Non-Discrimination:</strong> We will not discriminate against you for exercising your rights</li>
-    </ul>
-    <p>To exercise these rights, contact us at <strong>privacy@stammtisch.pro</strong></p>
-
-    <h2>9. International Data Transfers</h2>
-    <p>Your data may be processed in countries outside your residence, including the United States. We ensure adequate protection through:</p>
-    <ul>
-        <li>Standard Contractual Clauses (SCCs) approved by the European Commission</li>
-        <li>Adequacy decisions where applicable</li>
-        <li>Other appropriate safeguards as required by law</li>
-    </ul>
-
-    <h2>10. Children's Privacy</h2>
-    <p>Our Service is not intended for children under 16 (or the minimum age in your jurisdiction). We do not knowingly collect personal information from children. If we become aware of such collection, we will delete the information promptly.</p>
-
-    <h2>11. Cookies and Tracking</h2>
-    <p>We use essential cookies and similar technologies to:</p>
-    <ul>
-        <li>Maintain your session and preferences</li>
-        <li>Ensure security and prevent fraud</li>
-        <li>Analyze usage patterns (with anonymized data)</li>
-        <li>Improve service performance</li>
-    </ul>
-    <p>You can control cookies through your browser settings, though this may affect service functionality.</p>
-
-    <h2>12. Third-Party Services</h2>
-    <p>Our Service integrates with third-party services:</p>
-    <ul>
-        <li><strong>Firebase/Google Cloud:</strong> Data hosting and authentication</li>
-        <li><strong>Stripe:</strong> Payment processing (we don't store payment details)</li>
-        <li><strong>Email Services:</strong> Transactional and marketing emails</li>
-    </ul>
-    <p>These services have their own privacy policies and terms of service.</p>
-
-    <h2>13. California Privacy Rights (CCPA)</h2>
-    <p>California residents have additional rights:</p>
-    <ul>
-        <li>Right to know what personal information is collected and how it's used</li>
-        <li>Right to delete personal information</li>
-        <li>Right to opt-out of the sale of personal information (we don't sell data)</li>
-        <li>Right to non-discrimination for exercising privacy rights</li>
-    </ul>
-
-    <h2>14. Updates to This Policy</h2>
-    <p>We may update this Privacy Policy periodically. We will notify you of material changes through:</p>
-    <ul>
-        <li>Email notification to registered users</li>
-        <li>In-app notifications</li>
-        <li>Website announcements</li>
-    </ul>
-    <p>Continued use of our Service after changes constitutes acceptance of the updated policy.</p>
-
-    <h2>15. Data Protection Officer</h2>
-    <p>For GDPR-related inquiries, you may contact our Data Protection Officer at <strong>dpo@stammtisch.pro</strong></p>
-
-    <h2>16. Contact Information</h2>
-    <p>For privacy-related questions, concerns, or to exercise your rights, contact us:</p>
-    <ul>
-        <li><strong>Email:</strong> privacy@stammtisch.pro</li>
-        <li><strong>Data Protection Officer:</strong> dpo@stammtisch.pro</li>
-        <li><strong>Address:</strong> [Your Business Address]</li>
-    </ul>
-    
-    <h3>EU Representative (if applicable):</h3>
-    <p>If you are in the European Union and we do not have an establishment there, our EU representative can be contacted at: eu-representative@stammtisch.pro</p>
-    
-    <h3>Supervisory Authority:</h3>
-    <p>You have the right to lodge a complaint with your local data protection authority if you believe we have not addressed your concerns adequately.</p>
-
-    <h2>17. Definitions</h2>
-    <ul>
-        <li><strong>Personal Data:</strong> Any information relating to an identified or identifiable natural person</li>
-        <li><strong>Processing:</strong> Any operation performed on personal data, including collection, storage, use, and deletion</li>
-        <li><strong>Controller:</strong> Stammtisch, as the entity determining the purposes and means of processing</li>
-        <li><strong>Processor:</strong> Third-party services that process data on our behalf</li>
-    </ul>
+    <p>If GDPR or similar laws apply, Stammtisch is the controller of personal information processed for the Service unless otherwise stated. You may also have the right to lodge a complaint with your local data protection authority.</p>
 
     <footer>
         <p><strong>Stammtisch</strong></p>
@@ -392,5 +322,6 @@
     </footer>
     </div>
     <script src="i18n.js"></script>
+    <script src="cookie-consent.js"></script>
 </body>
 </html>

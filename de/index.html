@@ -25,6 +25,11 @@
     <meta name="twitter:title" content="Stammtisch.pro - Mit Freunden verbinden">
     <meta name="twitter:description" content="Schluss mit endlosen Gruppenchats. Findet automatisch den besten Tag, die beste Uhrzeit und den besten Ort für euer nächstes Treffen.">
     <meta name="twitter:image" content="https://stammtisch.pro/logo.png">
+    <script>
+        window.STAMMTISCH_GA_ID = 'G-LELECKYNXW';
+        window.STAMMTISCH_ANALYTICS_CONSENT_KEY = 'stammtisch_analytics_consent';
+        window['ga-disable-G-LELECKYNXW'] = localStorage.getItem(window.STAMMTISCH_ANALYTICS_CONSENT_KEY) !== 'granted';
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LELECKYNXW"></script>
     <script src="i18n.js"></script>
     <script type="application/ld+json">
@@ -644,7 +649,7 @@
             <p>Ein Stammtisch ist eine lange deutschsprachige Tradition: ein regelmäßiger Tisch, an dem Menschen immer wieder zusammenkommen, um Gespräche, Essen, Getränke und Gemeinschaft zu teilen.</p>
             <p>Heute kann ein Stammtisch flexibler sein. Er kann zwischen Lieblingsorten wechseln, sich an veränderte Zeitpläne anpassen und einer Gruppe helfen, den besten Termin, die beste Uhrzeit und den besten Ort zu finden, ohne endloses Hin und Her.</p>
             <p>Stammtisch.pro bringt diese Praxis ins moderne Leben: mit bestehenden Freunden verbunden bleiben, Raum für neue Kontakte schaffen und gute Vorsätze in echte Treffen verwandeln.</p>
-            <p><a href="de/what-is-a-stammtisch.html">Den vollständigen Stammtisch-Guide lesen</a></p>
+            <p><a href="what-is-a-stammtisch.html">Den vollständigen Stammtisch-Guide lesen</a></p>
         </section>
 
         <div class="hero-problem">
@@ -697,7 +702,7 @@
         </div>
 
         <p style="font-size: 0.9rem; opacity: 0.85; margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Die Android-Version ist derzeit für freigeschaltete Betatester verfügbar. Interessierte können unten die mit dem Google Play Store verknüpfte E-Mail-Adresse einreichen.
+            Verfügbar für iOS und Android. Erstelle eine Gruppe, lade Freunde ein, stimmt über Termine und Orte ab und haltet eure Treffen am Laufen.
         </p>
 
         <section class="product-preview">
@@ -822,9 +827,11 @@
             <p><strong>Stammtisch</strong></p>
             <p>© 2026 www.stammtisch.pro</p>
             <p style="margin-top: 15px;">
-                <a href="terms.html?lang=de" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Nutzungsbedingungen</a> · 
-                <a href="privacy.html?lang=de" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Datenschutzerklärung</a> ·
-                <a href="de/what-is-a-stammtisch.html" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Was ist ein Stammtisch?</a>
+                <a href="../terms.html?lang=de" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Nutzungsbedingungen</a> ·
+                <a href="../privacy.html?lang=de" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Datenschutzerklärung</a> ·
+                <a href="../community-guidelines.html?lang=de" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Community-Richtlinien</a> ·
+                <a href="../delete-account.html?lang=de" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Konto löschen</a> ·
+                <a href="what-is-a-stammtisch.html" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s ease;">Was ist ein Stammtisch?</a>
             </p>
             <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.7;">
                 Durch die Nutzung von Stammtisch stimmst du unseren Nutzungsbedingungen zu. Nutzer nehmen auf eigene Verantwortung an Treffen teil.
@@ -879,5 +886,6 @@
             }
         });
     </script>
+    <script src="../cookie-consent.js"></script>
 </body>
 </html>

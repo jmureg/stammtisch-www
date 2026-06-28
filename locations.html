@@ -24,6 +24,11 @@
     <meta name="twitter:title" content="Host a Stammtisch - Partner Locations">
     <meta name="twitter:description" content="Partner with Stammtisch to bring regular groups to your restaurant or bar.">
     <meta name="twitter:image" content="https://stammtisch.pro/logo.png">
+    <script>
+        window.STAMMTISCH_GA_ID = 'G-LELECKYNXW';
+        window.STAMMTISCH_ANALYTICS_CONSENT_KEY = 'stammtisch_analytics_consent';
+        window['ga-disable-G-LELECKYNXW'] = localStorage.getItem(window.STAMMTISCH_ANALYTICS_CONSENT_KEY) !== 'granted';
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LELECKYNXW"></script>
     <script src="i18n.js"></script>
     <script>
@@ -456,7 +461,7 @@
             <div class="badge">🍺 Partner Program</div>
             <h1>Help Fill Empty Tables With Regular Customers</h1>
             <p class="subtitle">
-                Join restaurants and bars hosting Stammtisch groups. Our platform can help you get more reservations, 
+                Join restaurants and bars welcoming Stammtisch groups. Our platform can help recurring groups discover your venue,
                 attract new customers during slower periods, and build a loyal community—all while getting free promotion in our app.
             </p>
 
@@ -484,7 +489,7 @@
                 <div class="benefit">
                     <span class="benefit-icon">📅</span>
                     <h3>More Predictable Bookings</h3>
-                    <p>Stammtisch groups typically meet bi-weekly, monthly, or quarterly, which may help you plan for recurring reservations.</p>
+                    <p>Stammtisch groups typically meet bi-weekly, monthly, or quarterly, which may help you plan for recurring visits.</p>
                 </div>
 
                 <div class="benefit">
@@ -536,7 +541,7 @@
                     <div class="step">
                         <div class="step-number">3</div>
                         <h4>Welcome Groups</h4>
-                        <p>Groups book directly through the app and visit regularly</p>
+                        <p>Groups discover your venue in the app and coordinate visits directly</p>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
@@ -655,7 +660,9 @@
             <p style="margin-top: 15px;">
                 <a href="index.htm">Home</a> · 
                 <a href="terms.html">Terms of Service</a> · 
-                <a href="privacy.html">Privacy Policy</a>
+                <a href="privacy.html">Privacy Policy</a> ·
+                <a href="community-guidelines.html">Community Guidelines</a> ·
+                <a href="delete-account.html">Delete Account</a>
             </p>
             <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.7;">
                 Results and outcomes may vary by venue. Stammtisch provides a platform to connect venues with groups but does not guarantee specific business results, customer volume, or revenue increases.
@@ -708,5 +715,6 @@
             }
         });
     </script>
+    <script src="cookie-consent.js"></script>
 </body>
 </html>
